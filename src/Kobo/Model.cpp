@@ -71,7 +71,23 @@ DetectKoboModel(const char *p)
 {
   for (const auto &i : kobo_model_ids)
     if (memcmp(p, i.id, strlen(i.id)) == 0)
-      return i.model;
+    {
+        if (i.model == KoboModel::AURA2)
+        {
+            if (strcmp(&p[9], "2") == 0)
+            {
+                return KoboModel::AURA2V2;
+            }
+            else
+            {
+                return KoboModel::AURA2;
+            }
+        }
+        else
+        {
+            return i.model;
+        }
+    }
 
   return KoboModel::UNKNOWN;
 }

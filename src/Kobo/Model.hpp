@@ -33,6 +33,7 @@ enum class KoboModel {
   TOUCH2,
   AURA,
   AURA2,
+  AURA2V2,
   GLO,
   GLO_HD,
 };

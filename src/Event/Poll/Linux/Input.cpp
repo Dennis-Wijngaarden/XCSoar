@@ -30,6 +30,7 @@ Copyright_License {
 #include "Translate.hpp"
 
 #include <algorithm>
+#include <errno.h>
 
 #include <termios.h>
 #include <sys/ioctl.h>
